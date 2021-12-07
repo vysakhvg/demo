@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="col-md-12">
+    <div class="card shadow">
+        <div class="card-header">
+            <div class="card-body">
+                <h5 class="card-title">{{task.name}} Time</h5>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success" style="background-color: cadetblue;">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+{% endblock %}
